@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<nav>
+  <%= link_to "Articles", articles_path %>
+  <%= link_to "Tags", taggables_path %>
+</nav>
+
+<h1>Articles</h1>
+
+<div id="articles">
+  <% @articles.each do |article| %>
+    <%= render article %>
+    <p>
+      <%= link_to "Show this article", article %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New article", new_article_path %>
