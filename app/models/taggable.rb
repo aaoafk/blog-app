@@ -14,4 +14,9 @@ class Taggable < ApplicationRecord
   def self.get_taggables(taggables)
     Taggable.where(['tag_name in (?)', taggables])
   end
+
+  #An orphan taggable is a taggable that doesn't refer to any articles anymore
+  def orphaned_taggable?
+    tags.count == 0
+  end
 end
