@@ -4,7 +4,7 @@ class Taggable < ApplicationRecord
   validates :tag_name, 
     presence: true, 
     length: { within: 1..10 }, 
-    format: { with: /[a-zA-Z0-9]+/ }
+    format: { with: /\A[a-zA-Z0-9]+\z/ }
 
   def self.add_taggable(new_taggable_name)
     taggable = Taggable.new(tag_name: new_taggable_name)

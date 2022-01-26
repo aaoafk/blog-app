@@ -3,9 +3,9 @@
 one:
   title: MyText
   body: MyText
-  tags: MyText
+  tag_names: MyText
 
 two:
   title: MyText
   body: MyText
-  tags: MyText
+  tag_names: MyText
