@@ -1,9 +1,12 @@
-<nav>
-  <%= link_to "Articles", articles_path %>
-  <%= link_to "Tags", taggables_path %>
-</nav>
+<div class="header">
+  <nav>
+    <%= link_to "Articles", articles_path %>
+    <%= link_to "Tags", taggables_path %>
+  </nav>
+</div>
 
-<div class="taggables">
+
+<div class="container">
   <% @taggables.each do |taggable| %>
     <%= render taggable %>
   <% end %>

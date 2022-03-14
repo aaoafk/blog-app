@@ -1,11 +1,13 @@
-<div>
-  <p><strong>Tag Name:</strong> <%= taggable.tag_name %> </p>
-</div>
-<div>
-  <p><strong>Created:</strong> <%= time_ago_in_words(taggable.created_at) %> ago</p>
-</div>
+<div class="container">
+  <div>
+    <p><strong>Tag Name:</strong> <%= taggable.tag_name %> </p>
+  </div>
+  <div>
+    <p><strong>Created:</strong> <%= time_ago_in_words(taggable.created_at) %> ago</p>
+  </div>
 
-<div>
-  <p><em><%= taggable.tag_name %></em> is linked to <%= link_to pluralize(taggable.articles.count, 'article'), taggable %>.</p>
-  <hr>
+  <div>
+    <p><em><%= taggable.tag_name %></em> is linked to <%= link_to pluralize(taggable.articles.count, 'article'), taggable %>.</p>
+    <hr>
+  </div>
 </div>

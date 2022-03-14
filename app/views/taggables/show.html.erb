@@ -1,16 +1,20 @@
-<nav>
-  <%= link_to "Articles", articles_path %>
-  <%= link_to "Tags", taggables_path %>
-</nav>
-
-<div>
-  <p><strong>Articles tagged with:</strong> <em><%= @taggable.tag_name %></em></p>
+<div class="header">
+  <nav>
+    <%= link_to "Articles", articles_path %>
+    <%= link_to "Tags", taggables_path %>
+  </nav>
 </div>
 
-<hr>
-<% @articles.each do |article| %>
-  <p><strong>Title: </strong><%= article.title %></p>
-  <p><strong>Content:</strong> <%= article.body[0..article.body.length / 2] %>...</p>
-  <%= link_to "read more...", article %>
+<div class="header">
+  <div>
+    <p><strong>Articles tagged with:</strong> <em><%= @taggable.tag_name %></em></p>
+  </div>
+
   <hr>
-<% end %>
+  <% @articles.each do |article| %>
+    <p><strong>Title: </strong><%= article.title %></p>
+    <p><strong>Content:</strong> <%= article.body[0..article.body.length / 2] %>...</p>
+    <%= link_to "read more...", article %>
+    <hr>
+  <% end %>
+</div>
